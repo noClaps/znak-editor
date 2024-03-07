@@ -1,5 +1,6 @@
-import { codeToHtml } from "https://esm.sh/shiki";
-const { markedHighlight } = globalThis.markedHighlight;
+import { codeToHtml } from "shiki";
+import { marked } from "marked";
+import { markedHighlight } from "marked-highlight";
 
 marked.use(
   markedHighlight({

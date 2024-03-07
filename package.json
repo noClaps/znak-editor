@@ -1,15 +1,15 @@
 {
   "name": "editor",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "devDependencies": {
     "@types/bun": "^1.0.8"
   },
   "scripts": {
-    "dev": "bun run --watch src/index.tsx"
+    "dev": "bun run --watch index.ts"
   },
   "dependencies": {
-    "@elysiajs/html": "^0.8.0",
-    "@elysiajs/static": "^0.8.1",
-    "elysia": "^0.8.17"
+    "marked": "^12.0.1",
+    "marked-highlight": "^2.1.1",
+    "shiki": "^1.1.7"
   }
 }
