@@ -1,15 +1,21 @@
-# Elysia with Bun runtime
+# Znak
 
-## Getting Started
-To get started with this template, simply paste this command into your terminal:
-```bash
-bun create elysia ./elysia-example
-```
+A minimal, self-hosted markdown editor in the browser. It also has support for $\LaTeX$ and syntax highlighting for code blocks.
 
-## Development
-To start the development server run:
-```bash
-bun run dev
-```
+## Usage
 
-Open http://localhost:3000/ with your browser to see the result.
+1. Clone the repository.
+
+   ```sh
+   git clone https://github.com/noClaps/znak.git
+   cd znak
+   ```
+
+2. Install dependencies and start the server.
+
+   ```sh
+   bun install
+   bun run dev
+   ```
+
+3. Write your content. You'll see a preview on the right side. You can then press Command+A to download the markdown file. **Reloading the page will clear the content, so ensure that you've saved it first**.

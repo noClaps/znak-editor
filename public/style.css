@@ -1,0 +1,59 @@
+:root {
+    box-sizing: border-box;
+    font-family: system-ui;
+    font-size: 1rem;
+    color-scheme: dark light;
+    background-color: canvas;
+    color: canvastext;
+}
+
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+main,
+aside {
+    padding: 1rem;
+    overflow-wrap: break-word;
+    max-width: 100%;
+    overflow: hidden;
+}
+
+main {
+    border-right: solid 0.125rem canvastext;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+aside > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+}
+
+.shiki {
+    margin: 0;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+code {
+    &:not(pre:not(pre.shiki) > code) {
+        background-color: #24292e;
+        color: #e1e4e8;
+        font-family: ui-monospace, monospace;
+    }
+
+    &:not(pre > code) {
+        padding: 0.25rem;
+        border-radius: 0.25rem;
+    }
+}

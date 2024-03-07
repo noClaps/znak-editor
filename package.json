@@ -1,15 +1,15 @@
 {
   "name": "editor",
-  "version": "1.0.50",
+  "version": "0.1.0",
+  "devDependencies": {
+    "@types/bun": "^1.0.8"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "bun run --watch src/index.ts"
+    "dev": "bun run --watch src/index.tsx"
   },
   "dependencies": {
-    "elysia": "latest"
-  },
-  "devDependencies": {
-    "bun-types": "latest"
-  },
-  "module": "src/index.js"
+    "@elysiajs/html": "^0.8.0",
+    "@elysiajs/static": "^0.8.1",
+    "elysia": "^0.8.17"
+  }
 }
