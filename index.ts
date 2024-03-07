@@ -9,6 +9,10 @@ Bun.serve({
   async fetch(request) {
     const path = new URL(request.url).pathname;
 
+    if (path.startsWith("/fonts")) {
+      return new Response(Bun.file(`node_modules/katex/dist${path}`));
+    }
+
     switch (path) {
       case "/style.css":
         return new Response(Bun.file("src/style.css"));
@@ -19,6 +23,9 @@ Bun.serve({
             "Content-Type": "application/javascript",
           },
         });
+
+      case "/katex.css":
+        return new Response(Bun.file("node_modules/katex/dist/katex.min.css"));
 
       default:
         return new Response(Bun.file("src/index.html"));

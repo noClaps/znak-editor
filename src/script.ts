@@ -1,6 +1,10 @@
+/// <reference lib="dom" />
+
 import { codeToHtml } from "shiki";
 import { marked } from "marked";
 import { markedHighlight } from "marked-highlight";
+import "katex";
+import renderMathInElement from "katex/contrib/auto-render";
 
 marked.use(
   markedHighlight({
@@ -48,8 +52,8 @@ main.addEventListener("keyup", async () => {
     output.firstChild.nodeName &&
     output.firstChild.nodeName === "H1"
   ) {
-    document.title = output.firstChild.innerText;
+    document.title = (output.firstChild as HTMLHeadingElement).innerText;
   } else {
-    document.title = "Editor";
+    document.title = "Znak";
   }
 });
