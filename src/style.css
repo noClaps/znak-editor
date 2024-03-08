@@ -28,6 +28,7 @@ aside {
 
 main {
     border-right: solid 0.125rem canvastext;
+    font-family: ui-monospace, monospace;
 
     &:focus {
         outline: none;
