@@ -1,10 +1,8 @@
-/// <reference lib="dom" />
-
-import { codeToHtml } from "shiki";
-import { marked } from "marked";
-import { markedHighlight } from "marked-highlight";
-import "katex";
-import renderMathInElement from "katex/contrib/auto-render";
+import { codeToHtml } from "https://esm.sh/shiki";
+import { marked } from "https://esm.sh/marked";
+import { markedHighlight } from "https://esm.sh/marked-highlight";
+import "https://esm.sh/katex";
+import renderMathInElement from "https://esm.sh/katex/contrib/auto-render";
 
 marked.use(
   markedHighlight({
@@ -25,7 +23,7 @@ const output = document.getElementById("output");
 if (!output) throw new Error("Output (aside) element not found");
 
 main.addEventListener("keydown", (e) => {
-  if (e.metaKey && e.key === "s") {
+  if ((e.metaKey || e.ctrlKey) && e.key === "s") {
     e.preventDefault();
 
     const blob = new Blob([main.innerText]);
@@ -52,7 +50,7 @@ main.addEventListener("keyup", async () => {
     output.firstChild.nodeName &&
     output.firstChild.nodeName === "H1"
   ) {
-    document.title = (output.firstChild as HTMLHeadingElement).innerText;
+    document.title = output.firstChild.innerText;
   } else {
     document.title = "Znak";
   }
