@@ -97,3 +97,8 @@ button {
         display: none;
     }
 }
+
+/* I have no clue what this is or why Cloudflare adds it during build */
+foreignobject {
+    display: none;
+}
