@@ -89,16 +89,11 @@ button {
     top: 0;
     right: 0rem;
 
-    &.code .lucide-eye {
+    &.code .lucide-code {
         display: none;
     }
 
-    &.preview .lucide-code {
+    &.preview .lucide-eye {
         display: none;
     }
-}
-
-/* I have no clue what this is or why Cloudflare adds it during build */
-foreignobject {
-    display: none;
 }
