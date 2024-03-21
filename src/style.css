@@ -15,7 +15,15 @@ body {
 body {
     margin: 0;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: auto 1fr;
+
+    &:has(.preview) main {
+        display: none;
+    }
+
+    &:has(.code) aside {
+        display: none;
+    }
 }
 
 main,
@@ -27,8 +35,8 @@ aside {
 }
 
 main {
-    border-right: solid 0.125rem canvastext;
     font-family: ui-monospace, monospace;
+    white-space: pre;
 
     &:focus {
         outline: none;
@@ -47,14 +55,45 @@ aside > *:first-child {
 }
 
 code {
-    &:not(pre:not(pre.shiki) > code) {
-        background-color: #24292e;
-        color: #e1e4e8;
-        font-family: ui-monospace, monospace;
-    }
+    padding: 0.5rem;
+    background-color: #24292e;
+    color: #e1e4e8;
+    border-radius: 0.25rem;
 
     &:not(pre > code) {
         padding: 0.25rem;
-        border-radius: 0.25rem;
+    }
+}
+
+.sidebar {
+    width: fit-content;
+    border-right: 0.125rem solid canvastext;
+}
+
+button {
+    all: unset;
+    cursor: pointer;
+    background-color: #007aff;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    margin: 0 0.5rem;
+
+    svg {
+        height: 1.25rem;
+        vertical-align: middle;
+    }
+}
+
+.view-button {
+    position: absolute;
+    top: 0;
+    right: 0rem;
+
+    &.code .lucide-eye {
+        display: none;
+    }
+
+    &.preview .lucide-code {
+        display: none;
     }
 }
