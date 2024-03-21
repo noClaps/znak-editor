@@ -20,5 +20,5 @@ await $`cp node_modules/highlight.js/styles/github-dark.min.css dist/highlight/h
 Bun.build({
   entrypoints: ["src/script.ts"],
   outdir: "dist",
-  minify: Bun.env.NODE_ENV === "production",
+  minify: true,
 });
