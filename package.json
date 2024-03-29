@@ -1,6 +1,5 @@
 {
-  "name": "znak",
-  "module": "index.ts",
+  "name": "znak-frontend",
   "type": "module",
   "devDependencies": {
     "@types/bun": "^1.0.10",
@@ -12,7 +11,7 @@
   "dependencies": {
     "highlight.js": "^11.9.0",
     "hyperscript.org": "^0.9.12",
-    "katex": "^0.16.9",
+    "katex": "^0.16.10",
     "marked": "^12.0.1",
     "marked-highlight": "^2.1.1"
   },
