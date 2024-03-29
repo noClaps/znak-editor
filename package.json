@@ -16,7 +16,7 @@
     "marked-highlight": "^2.1.1"
   },
   "scripts": {
-    "build": "bun build.ts",
-    "dev": "bun build.ts && bunx serve dist/"
+    "build": "bun scripts/build.ts",
+    "dev": "bun scripts/dev.ts"
   }
 }
