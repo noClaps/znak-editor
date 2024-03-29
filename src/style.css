@@ -43,26 +43,19 @@ main {
     }
 }
 
-aside > *:first-child {
-    margin-top: 0;
-    padding-top: 0;
-}
-
-.shiki {
+pre {
     margin: 0;
     padding: 0.5rem;
     border-radius: 0.5rem;
+    background-color: #24292e;
+    color: #e1e4e8;
 }
 
-code {
-    padding: 0.5rem;
+code:not(pre > code) {
     background-color: #24292e;
     color: #e1e4e8;
     border-radius: 0.25rem;
-
-    &:not(pre > code) {
-        padding: 0.25rem;
-    }
+    padding: 0.25rem;
 }
 
 .sidebar {
