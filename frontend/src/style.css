@@ -1,0 +1,98 @@
+:root {
+    --background: #000;
+    --text: #fff;
+    --dark-grey: #222;
+    --grey: #444;
+
+    --code-bg: #24292e;
+    --code-text: #e1e4e8;
+
+    --mono: ui-monospace, monospace;
+    font-family: system-ui;
+}
+
+html {
+    height: 100dvh;
+}
+
+body {
+    background-color: var(--background);
+    color: var(--text);
+    margin: 0;
+    padding: 1rem;
+    display: grid;
+    grid-template-rows: 1fr;
+    height: calc(100% - 2rem);
+
+    &:has(#view-toggle input:checked) {
+        #input {
+            visibility: hidden;
+        }
+
+        #output {
+            visibility: visible;
+        }
+    }
+}
+
+main {
+    position: relative;
+}
+
+#input {
+    position: absolute;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    background-color: var(--background);
+    color: var(--text);
+    border: none;
+    font-size: 1rem;
+    resize: none;
+    font-family: var(--mono);
+    padding: 0;
+    visibility: visible;
+
+    &:focus {
+        outline: none;
+    }
+}
+
+#output {
+    visibility: hidden;
+    min-height: max-content;
+    overflow: auto;
+}
+
+#view-toggle {
+    z-index: 3;
+    position: fixed;
+    top: 0.875rem;
+    right: 0.875rem;
+    cursor: pointer;
+    background-color: var(--background);
+    color: var(--text);
+    border: none;
+    padding: 0.25rem;
+    display: flex;
+    border-radius: 0.5rem;
+    transition: background-color 0.25s;
+
+    &:hover {
+        background-color: var(--grey);
+    }
+
+    input {
+        appearance: none;
+        margin: 0;
+    }
+
+    &:has(input:not(:checked)) .lucide-eye-off {
+        display: none;
+    }
+
+    &:has(input:checked) .lucide-eye {
+        display: none;
+    }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "frontend",
+  "module": "index.ts",
+  "type": "module",
+  "devDependencies": {
+    "@types/bun": "^1.1.6",
+    "typescript": "^5.5.4"
+  },
+  "dependencies": {
+    "@noclaps/znak": "npm:@jsr/noclaps__znak"
+  },
+  "scripts": {
+    "build": "chmod +x scripts/build && $_",
+    "dev": "bun scripts/dev.ts"
+  }
+}

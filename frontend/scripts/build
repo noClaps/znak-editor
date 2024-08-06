@@ -1,0 +1,5 @@
+#!/bin/sh
+
+mkdir -p dist
+cp src/index.html src/style.css src/output.css dist/
+bun build src/script.ts --minify --outfile dist/script.js
