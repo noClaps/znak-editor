@@ -25,3 +25,13 @@ toggle.addEventListener("change", async () => {
     output.innerHTML = "";
   }
 });
+
+const info = document.querySelector<HTMLDialogElement>("#info");
+if (!info) throw new Error("Info dialog not found");
+
+const infoButton = document.querySelector<HTMLButtonElement>("#info-button");
+if (!infoButton) throw new Error("Info button not found");
+
+infoButton.addEventListener("click", () => {
+  info.showModal();
+});

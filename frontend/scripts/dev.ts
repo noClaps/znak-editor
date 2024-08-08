@@ -19,6 +19,10 @@ const serverOptions: Serve = {
         });
       case "/output.css":
         return new Response(Bun.file("src/output.css"));
+      case "/favicon.png":
+        return new Response(Bun.file("src/favicon.png"));
+      case "/icon.png":
+        return new Response(Bun.file("src/icon.png"));
 
       default:
         return new Response("Not found", { status: 404 });
@@ -28,7 +32,6 @@ const serverOptions: Serve = {
 
 const server = Bun.serve(serverOptions);
 console.log(`Server started on ${server.url}`);
-await $`open ${server.url}`;
 
 watch("src", (event, filename) => {
   console.log(`Detected ${event} on ${filename}`);

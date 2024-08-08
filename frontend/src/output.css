@@ -45,6 +45,7 @@ figcaption {
     margin: auto;
 }
 
+/* Blockquote */
 blockquote {
     margin-left: 0;
     padding-left: 1rem;
@@ -85,4 +86,9 @@ blockquote {
 
 .note {
     --accent: oklch(50% 0.25 300);
+}
+
+/* Link */
+a {
+    color: var(--text);
 }
