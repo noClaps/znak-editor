@@ -8,13 +8,20 @@ A minimal, self-hosted markdown editor in the browser. It also has support for $
 
    ```sh
    git clone https://github.com/noClaps/znak.git
-   cd znak
+   cd znak/frontend
    ```
 
 2. Start the server.
 
    ```sh
-   bunx serve src/
+   bun install
+   bun dev
    ```
 
-3. Write your content. You'll see a preview on the right side. You can then press ⌘+S to download the markdown file. **Reloading the page will clear the content, so ensure that you've saved it first**.
+3. Build the project.
+
+   ```sh
+   bun run build
+   ```
+
+   This will build the frontend and place it in `frontend/dist`.
